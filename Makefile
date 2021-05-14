@@ -18,19 +18,19 @@ prepare-dist:
 	cp dist/plz dist/$(VERSION)/plz
 	ls -lh dist/$(VERSION)
 
+.PHONY: prepare-dist
+
 update-formula: prepare-dist
 	@echo 'Update formula with version $(VERSION) and SHA $(SHA)'
 	sed -i '' -E 's/sha256 ".*"/sha256 "$(SHA)"/g' plz.rb
 	sed -i '' -E 's/v.*\.tar\.gz/v$(VERSION)\/plz-$(VERSION).tar.gz/g' plz.rb
+
 .PHONY: update-formula
 
 push-release: update-formula
 	@echo 'Release version $(VERSION)'
-	
 	gh release create v$(VERSION) ./dist/$(VERSION)/* --title $(VERSION) --notes ""
-	
-	git add . 
-	git commit -m "version X.Y.Z"
+
 .PHONY: push-release
 
 push-formula: 
@@ -38,7 +38,6 @@ push-formula:
 	git commit -m "plz v$(VERSION)"
 
 .PHONY: push-formula
-
 
 help:
 
