@@ -1,6 +1,6 @@
 # Bitcomplete Homebrew Tap repository: Developer Guide
 
-Developper Guide to deploy new plz release. 
+Developer Guide to deploy new plz release. 
 
 ## Release a new version
 
