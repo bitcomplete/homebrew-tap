@@ -2,7 +2,7 @@ SHELL := /bin/bash
 
 # TODO ch4765 retrieve version from `plz version`
 # VERSION = $(shell ./dist/plz version)
-VERSION = 0.0.1
+VERSION = 0.0.2
 ARCHIVE = dist/$(VERSION)/plz-$(VERSION).tar.gz
 SHA = $(shell shasum -a 256 $(ARCHIVE) | awk '{print $$1}')
 
@@ -13,7 +13,7 @@ all: help
 prepare-dist: 
 	@echo 'Build version $(VERSION)'
 	mkdir -p dist/$(VERSION)
-	rm dist/$(VERSION)/*
+	rm -f dist/$(VERSION)/*
 	tar -czf $(ARCHIVE) -C dist plz
 	cp dist/plz dist/$(VERSION)/plz
 	ls -lh dist/$(VERSION)

@@ -3,8 +3,8 @@ require "formula"
 class Plz < Formula
     desc "plz CLI"
     homepage "http://bitcomplete.io"
-    url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.0.1/plz-0.0.1.tar.gz"
-    sha256 "0b50af653b763c9fdb071c3ae1eb9b44b59564c40dbccf2190b0a65928cc060b"
+    url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.0.2/plz-0.0.2.tar.gz"
+    sha256 "08e2cf7f60bee9e71ef7c0ca058198c8fe05d5b73849918474b30ce46014b56f"
 
     bottle :unneeded
   
