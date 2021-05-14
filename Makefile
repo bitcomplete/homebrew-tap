@@ -35,7 +35,7 @@ push-release: update-formula
 
 push-formula: 
 	git add plz.rb
-    git commit -m "plz v$(VERSION)"
+	git commit -m "plz v$(VERSION)"
 
 .PHONY: push-formula
 
