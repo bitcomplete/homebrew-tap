@@ -28,9 +28,9 @@ push-release: update-formula
 	@echo 'Release version $(VERSION)'
 	
 	gh release create v$(VERSION) ./dist/$(VERSION)/* --title $(VERSION) --notes ""
-
-    git add . 
-    git commit -m "version X.Y.Z"
+	
+	git add . 
+	git commit -m "version X.Y.Z"
 .PHONY: push-release
 
 push-formula: 
