@@ -6,11 +6,11 @@ Homebrew Tap repository for Plz Review and other tools.
 
 ```
     # (optional) brew update
-    brew tap bitcomplete/plz
+    brew tap bitcomplete/homebrew-tap
     brew install plz
 
     # or install directly 
-    brew install bitcomplete/tap/plz
+    brew install bitcomplete/homebrew-tap/plz
 ```
 [See ascii cast](https://asciinema.org/a/DhpKaKBoWdH5FrwtS3AAIdlkA)
 
