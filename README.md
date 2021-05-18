@@ -6,7 +6,7 @@ Homebrew Tap repository for Plz Review and other tools.
 
 ```
     # (optional) brew update
-    brew tap bitcomplete/plz
+    brew tap bitcomplete/tap
     brew install plz
 
     # or install directly 
