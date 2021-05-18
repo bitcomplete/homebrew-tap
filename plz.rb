@@ -2,9 +2,10 @@ require "formula"
 
 class Plz < Formula
     desc "plz CLI"
-    homepage "http://bitcomplete.io"
-    url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.0.2/plz-0.0.2.tar.gz"
-    sha256 "08e2cf7f60bee9e71ef7c0ca058198c8fe05d5b73849918474b30ce46014b56f"
+    homepage "https://plz.review"
+    version "0.1.0"
+    url "https://github.com/bitcomplete/plz-cli/releases/download/0.1.0/plz-darwin-amd64-0.1.0.tar.gz"
+    sha256 "b06449fd78c62f6dbf9b9d5c132cbfcd3cf2e4d7180cb01d8125415295eb3e31"
 
     bottle :unneeded
   
@@ -13,7 +14,6 @@ class Plz < Formula
     end
   
     test do
-      # TODO ch4765 replace by `plz version`
-      system "#{bin}/plz", "--help"
+      system "#{bin}/plz", "--version"
     end
-  end
+end
