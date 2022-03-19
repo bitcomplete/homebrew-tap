@@ -5,20 +5,20 @@
 class Plz < Formula
   desc "plz CLI"
   homepage "https://plz.review"
-  version "0.1.5"
+  version "0.7.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.5/plz_0.1.5_Darwin_arm64.tar.gz"
-      sha256 "270b0a694c95cc08f3f5b580dc83a7aa5797a8f348729918c6f8eb9604474712"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.7.1/plz_0.7.1_Darwin_arm64.tar.gz"
+      sha256 "0dd5b7425f53dfb0884750c273ef017e5b3390d7e014d4e82999fd05d096d9d0"
 
       def install
         bin.install "plz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.5/plz_0.1.5_Darwin_x86_64.tar.gz"
-      sha256 "6f649e3cb11f63fe48975aceaefa0a40e9eb3b26e0aafb86d2c222f2de17d2fd"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.7.1/plz_0.7.1_Darwin_x86_64.tar.gz"
+      sha256 "f0516facb87552cc55d624e9c6351d16a9a257791c57c6bf672a4d9b3c904417"
 
       def install
         bin.install "plz"
@@ -28,16 +28,16 @@ class Plz < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.5/plz_0.1.5_Linux_arm64.tar.gz"
-      sha256 "c642aedc9a69a1180047d0cc77dbca792de70221d6653524dec83f1a9ed636ed"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.7.1/plz_0.7.1_Linux_arm64.tar.gz"
+      sha256 "e1bddfb314f9e2f10e99df47d6d804733d0bb89b3031c6df1054e83f90d11d8a"
 
       def install
         bin.install "plz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.5/plz_0.1.5_Linux_x86_64.tar.gz"
-      sha256 "5068593e18e0f92c052908f56c23c5ae577b9d37ab72845ab763f3ce7e0542b7"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.7.1/plz_0.7.1_Linux_x86_64.tar.gz"
+      sha256 "e39321d90d6dcc42d341ea6a514d8eec6f418d432b27e902e484508f0a4f0aa5"
 
       def install
         bin.install "plz"
