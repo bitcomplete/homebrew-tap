@@ -5,20 +5,20 @@
 class Plz < Formula
   desc "plz CLI"
   homepage "https://plz.review"
-  version "0.1.9"
+  version "0.1.10"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.9/plz_0.1.9_Darwin_arm64.tar.gz"
-      sha256 "b78c6092200d23f07996ecec73bd0e5f75549cd2054645ddf4d65e3f7945a706"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.10/plz_0.1.10_Darwin_arm64.tar.gz"
+      sha256 "0bb98832340b7aa1b56b576f7c1edf79bfeb8eb1dceb9d2844595866882130ab"
 
       def install
         bin.install "plz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.9/plz_0.1.9_Darwin_x86_64.tar.gz"
-      sha256 "bd9e5a2e32da870db00b4952230b74da154f51ef95247f5d6bef5b7599d65503"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.10/plz_0.1.10_Darwin_x86_64.tar.gz"
+      sha256 "026188adf6450a165324ec4576f0c0deb4fa6f13e0477bf4578d63760e38a13a"
 
       def install
         bin.install "plz"
@@ -27,17 +27,17 @@ class Plz < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.9/plz_0.1.9_Linux_arm64.tar.gz"
-      sha256 "3e14eaa5265987ca032b99b0d0a6632565696bcda070d2c1efe50e0fe28ce863"
+    if Hardware::CPU.intel?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.10/plz_0.1.10_Linux_x86_64.tar.gz"
+      sha256 "f1e4528ba56494c8471318db34885c81bbdb12bc479a043048743724524ea15e"
 
       def install
         bin.install "plz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.9/plz_0.1.9_Linux_x86_64.tar.gz"
-      sha256 "cbd5074301bfbbdc8de23e4eb7a8484ec65491bcbd19fd0997c2c470927ac2f8"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.1.10/plz_0.1.10_Linux_arm64.tar.gz"
+      sha256 "dcc12ff69dbeedd9a9c0467d2bd60ed03390111a68b2c4f6710198e4c01652dc"
 
       def install
         bin.install "plz"
