@@ -5,20 +5,20 @@
 class GcpRunbatch < Formula
   desc ""
   homepage "https://github.com/bitcomplete/gcp-runbatch"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bitcomplete/gcp-runbatch/releases/download/v0.1.0/gcp-runbatch_0.1.0_Darwin_arm64.tar.gz"
-      sha256 "35ea2732f0f080aa18ac2737613062412aa008fae05e032fffc3d43d553a7afa"
+      url "https://github.com/bitcomplete/gcp-runbatch/releases/download/v0.1.1/gcp-runbatch_0.1.1_Darwin_arm64.tar.gz"
+      sha256 "ac38379c81c95c814b655716ae6fff16b7d29d148c5323667d9d8af5c1282ee5"
 
       def install
         bin.install "gcp-runbatch"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/gcp-runbatch/releases/download/v0.1.0/gcp-runbatch_0.1.0_Darwin_x86_64.tar.gz"
-      sha256 "a6d333fe9b6fc183250ec37fb207cb39bdf848d41bb044e588a63bbce8bad7c6"
+      url "https://github.com/bitcomplete/gcp-runbatch/releases/download/v0.1.1/gcp-runbatch_0.1.1_Darwin_x86_64.tar.gz"
+      sha256 "5144baf90467fe2053760f811b9db897843dbaaa284e474420f1007368255ef1"
 
       def install
         bin.install "gcp-runbatch"
@@ -27,17 +27,17 @@ class GcpRunbatch < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/gcp-runbatch/releases/download/v0.1.0/gcp-runbatch_0.1.0_Linux_x86_64.tar.gz"
-      sha256 "de0dec23f3e0e3d54a8062588d4c83054921ea3de753f81b1ed6e3b715660256"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bitcomplete/gcp-runbatch/releases/download/v0.1.1/gcp-runbatch_0.1.1_Linux_arm64.tar.gz"
+      sha256 "e9be9c615cbb6bc626e6fd3e6b15a584ece3fb73d54dae088ba53a17f4efdbe8"
 
       def install
         bin.install "gcp-runbatch"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/gcp-runbatch/releases/download/v0.1.0/gcp-runbatch_0.1.0_Linux_arm64.tar.gz"
-      sha256 "e44ba58e0d65c412f1e1d1dd407a2f33ccde2dca15180d918f73d71966404ffe"
+    if Hardware::CPU.intel?
+      url "https://github.com/bitcomplete/gcp-runbatch/releases/download/v0.1.1/gcp-runbatch_0.1.1_Linux_x86_64.tar.gz"
+      sha256 "b48e940696b7da569a1a688a10c209c598a0d815534ae1169a8b15b2de3d352d"
 
       def install
         bin.install "gcp-runbatch"
