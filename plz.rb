@@ -5,20 +5,20 @@
 class Plz < Formula
   desc "plz CLI"
   homepage "https://plz.review"
-  version "0.2.0"
+  version "0.2.1"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.2.0/plz_0.2.0_Darwin_x86_64.tar.gz"
-      sha256 "088a79535cdab63bcd9fd66f817fabb760cbf8c401b616d611fbca07077ae3d4"
+    if Hardware::CPU.arm?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.2.1/plz_0.2.1_Darwin_arm64.tar.gz"
+      sha256 "f40fd521f26d91a7c8fdb6860c73b63ad1a52504bf476a973a2c066218a2169e"
 
       def install
         bin.install "plz"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.2.0/plz_0.2.0_Darwin_arm64.tar.gz"
-      sha256 "2778a2f19caedf08d386a4686323ef8e9f627c2d8af6663f75ea10ade21e8d20"
+    if Hardware::CPU.intel?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.2.1/plz_0.2.1_Darwin_x86_64.tar.gz"
+      sha256 "6268b6bdeb72edb895605a9d72e3e0ec7ad059acf217944441e0866b3520c657"
 
       def install
         bin.install "plz"
@@ -28,16 +28,16 @@ class Plz < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.2.0/plz_0.2.0_Linux_x86_64.tar.gz"
-      sha256 "34fff6352bbff1e8d66537478a06e8d8e7a607f4f42ca44454c12796cac3e6e7"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.2.1/plz_0.2.1_Linux_x86_64.tar.gz"
+      sha256 "b10b1d85162a8f1f5eb7f00c9ca04fd00fa2879687784b924def72ac8c4dc51a"
 
       def install
         bin.install "plz"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.2.0/plz_0.2.0_Linux_arm64.tar.gz"
-      sha256 "50c24b11c27327a0199c9bc817bf02da446196f76df456fc2d2a1a5dc5b00263"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.2.1/plz_0.2.1_Linux_arm64.tar.gz"
+      sha256 "543aa34f3353e5cf9fc14cbad174f022831b290f425caa1281c821436f6434dc"
 
       def install
         bin.install "plz"
