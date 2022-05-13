@@ -5,20 +5,20 @@
 class Plz < Formula
   desc "plz CLI"
   homepage "https://plz.review"
-  version "0.3.0"
+  version "0.3.1"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.0/plz_0.3.0_Darwin_arm64.tar.gz"
-      sha256 "cc5bfcf11c9065543fe8291cae838fc8fb49329889ccae44bb90d279a5a48a34"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.1/plz_0.3.1_Darwin_arm64.tar.gz"
+      sha256 "f63f89e38a57da34f35d5fc135ccb14fa92f767da7038930afec0b419f338ab9"
 
       def install
         bin.install "plz"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.0/plz_0.3.0_Darwin_x86_64.tar.gz"
-      sha256 "48fe280fe9b2958c5cf59076a14ca597240bbbb7fb5c633a4595af08a259d34c"
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.1/plz_0.3.1_Darwin_x86_64.tar.gz"
+      sha256 "d4dc084c71dbcaf9eb9d2fdc5a1537035a9b50048ca3283cf837daa4287409ab"
 
       def install
         bin.install "plz"
@@ -27,17 +27,17 @@ class Plz < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.0/plz_0.3.0_Linux_arm64.tar.gz"
-      sha256 "7a438ce92177e9f005679515119dca83bf1cee46da3015d9aa6a90dca3d7378c"
+    if Hardware::CPU.intel?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.1/plz_0.3.1_Linux_x86_64.tar.gz"
+      sha256 "1d8fb5bfacea521ebf2bf773e5c56a0b02f9567e92a0884d8bba624a93377d12"
 
       def install
         bin.install "plz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.0/plz_0.3.0_Linux_x86_64.tar.gz"
-      sha256 "0c7b109cd28711d43b4c906e0f11ec49ee4065ec164438d445d5467b22a9a9d6"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.1/plz_0.3.1_Linux_arm64.tar.gz"
+      sha256 "77c6959311a8ebdb051406ad8a870324e236fb70b3c239a319e5c2ba885e3d29"
 
       def install
         bin.install "plz"
