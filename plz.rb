@@ -5,20 +5,20 @@
 class Plz < Formula
   desc "plz CLI"
   homepage "https://plz.review"
-  version "0.3.4"
+  version "0.3.5"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.4/plz_0.3.4_Darwin_arm64.tar.gz"
-      sha256 "b6703505b7f73524dd72b4f438eed225cec342903d52a87252377419e34afb52"
+    if Hardware::CPU.intel?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.5/plz_0.3.5_Darwin_x86_64.tar.gz"
+      sha256 "16ccc5b88cd0a61c10e42172c2251ab5c2050a63d8736b373456aa8a9ac24af3"
 
       def install
         bin.install "plz"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.4/plz_0.3.4_Darwin_x86_64.tar.gz"
-      sha256 "4e829f4e27e7a2245e8537b6bd26c933518f89e04861c6d4e2fc4a5f8aaef5af"
+    if Hardware::CPU.arm?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.5/plz_0.3.5_Darwin_arm64.tar.gz"
+      sha256 "fa0866dac9d323977cbb764ca888f5f31b50fcc21fc8f1bb5ede2ed6552f115e"
 
       def install
         bin.install "plz"
@@ -27,17 +27,17 @@ class Plz < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.4/plz_0.3.4_Linux_x86_64.tar.gz"
-      sha256 "34ff1b1a3cd2c3274694275fcc260d667a6d3af01981b3e0f20ea670e10336ff"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.5/plz_0.3.5_Linux_arm64.tar.gz"
+      sha256 "05054214ed53c93223c042afeab54e64f3e0bb923a41bb2ab59a71f6b2c1284a"
 
       def install
         bin.install "plz"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.4/plz_0.3.4_Linux_arm64.tar.gz"
-      sha256 "d34b9fa11bf0cfa805ffe15a9e6d693c9820e87c08640c1e04c6b64930fbce7e"
+    if Hardware::CPU.intel?
+      url "https://github.com/bitcomplete/plz-cli/releases/download/v0.3.5/plz_0.3.5_Linux_x86_64.tar.gz"
+      sha256 "a453661001c9bb172ddcc63e3a84c276e03e16fa7325a9707ab25c46a923ca37"
 
       def install
         bin.install "plz"
