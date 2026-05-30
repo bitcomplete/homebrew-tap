@@ -5,21 +5,21 @@
 class Pin < Formula
   desc "Command-line client for pin (HTML sharing service)"
   homepage "https://github.com/bitcomplete/pin-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/pin-cli/releases/download/v0.1.0/pin_0.1.0_darwin_amd64.tar.gz"
-      sha256 "dd64d8673579684a7381dfbe13c4088bc519f8f75de3bd31fb60005f4da3ca98"
+      url "https://github.com/bitcomplete/pin-cli/releases/download/v0.2.0/pin_0.2.0_darwin_amd64.tar.gz"
+      sha256 "cc586a4e5870172fd4d334fe57638a33c684c6a82a008f1a816c4ff8722b3c8c"
 
       define_method(:install) do
         bin.install "pin"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bitcomplete/pin-cli/releases/download/v0.1.0/pin_0.1.0_darwin_arm64.tar.gz"
-      sha256 "fc6a6a022807b1ceb1a7d7c1b5c3de3b914524c9f3dfd928f4b1fb4876b1a8c3"
+      url "https://github.com/bitcomplete/pin-cli/releases/download/v0.2.0/pin_0.2.0_darwin_arm64.tar.gz"
+      sha256 "17b003ec5a569623204c3f7943b012c2ec87dfe07760a8a4eb06f23a83ebfc6e"
 
       define_method(:install) do
         bin.install "pin"
@@ -29,15 +29,15 @@ class Pin < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/pin-cli/releases/download/v0.1.0/pin_0.1.0_linux_amd64.tar.gz"
-      sha256 "d82c4f659c5dad83735c80736cbdbebc7799e4d6b7190e95e2f3686f97803380"
+      url "https://github.com/bitcomplete/pin-cli/releases/download/v0.2.0/pin_0.2.0_linux_amd64.tar.gz"
+      sha256 "837929fcc3c135f8df94af4c53ef907bca0759d20da2a9be50a4072e1c84043f"
       define_method(:install) do
         bin.install "pin"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/pin-cli/releases/download/v0.1.0/pin_0.1.0_linux_arm64.tar.gz"
-      sha256 "07c665d61546b97d422e81a210d283e7c5f880bf471d2132f905138734fa1c1c"
+      url "https://github.com/bitcomplete/pin-cli/releases/download/v0.2.0/pin_0.2.0_linux_arm64.tar.gz"
+      sha256 "6cda2dfb780b3dadad35cf0f848057be843e749fdb4da12788966229f515d556"
       define_method(:install) do
         bin.install "pin"
       end
