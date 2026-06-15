@@ -5,21 +5,21 @@
 class Kploy < Formula
   desc "CLI for managing Kploy environments"
   homepage "https://github.com/bitcomplete/kploy-cli"
-  version "0.1.1-test2"
+  version "0.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.1-test2/kploy_0.1.1-test2_darwin_amd64.tar.gz"
-      sha256 "6f379fdc57a464a9a69cc1a2cb9ce12051befac9d129bc5082e330d1d7c2dc81"
+      url "https://github.com/bitcomplete/kploy-cli/releases/download/v0.1.0/kploy_0.1.0_darwin_amd64.tar.gz"
+      sha256 "c9e26449175490a4f852f305163c82cac6cca8c7a90e39808a1f7872e89a2684"
 
       define_method(:install) do
         bin.install "kploy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.1-test2/kploy_0.1.1-test2_darwin_arm64.tar.gz"
-      sha256 "43db4177b441da2bc08fd2678df034d348e0d9f6e31837736320c2ca36dd4487"
+      url "https://github.com/bitcomplete/kploy-cli/releases/download/v0.1.0/kploy_0.1.0_darwin_arm64.tar.gz"
+      sha256 "4bb115c3f290414cc8603e93c485233de5b4460c18e652df5f3a19aa12c76d8f"
 
       define_method(:install) do
         bin.install "kploy"
@@ -29,15 +29,15 @@ class Kploy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.1-test2/kploy_0.1.1-test2_linux_amd64.tar.gz"
-      sha256 "6cec230077e5260122a94fc8dd98d48c091a35b511f5b6d9a72ba0da59de7541"
+      url "https://github.com/bitcomplete/kploy-cli/releases/download/v0.1.0/kploy_0.1.0_linux_amd64.tar.gz"
+      sha256 "7245fc6bff6f8cf6056e795adec7a096e80f830a65029abf0602ae965d727e8f"
       define_method(:install) do
         bin.install "kploy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.1-test2/kploy_0.1.1-test2_linux_arm64.tar.gz"
-      sha256 "b85e68c252ca77d8b6df8d01160d085d45a6387e2341f2430c48546564375cf2"
+      url "https://github.com/bitcomplete/kploy-cli/releases/download/v0.1.0/kploy_0.1.0_linux_arm64.tar.gz"
+      sha256 "68d8f77d921e4feee5c8cc092f2db348d17f204d047f6aa387a9eda3e7c7a100"
       define_method(:install) do
         bin.install "kploy"
       end
