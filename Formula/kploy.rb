@@ -5,21 +5,21 @@
 class Kploy < Formula
   desc "CLI for managing Kploy environments"
   homepage "https://github.com/bitcomplete/kploy-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.1/kploy_0.1.1_darwin_amd64.tar.gz"
-      sha256 "b85f312e2e177bb6ef671f737a5423b50066424dae7d93a1685bf26910a76235"
+      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.2/kploy_0.1.2_darwin_amd64.tar.gz"
+      sha256 "b364a0bbfda81b403260917f36ef162b538c675b5afb8a87f3fd45648441cba9"
 
       define_method(:install) do
         bin.install "kploy"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.1/kploy_0.1.1_darwin_arm64.tar.gz"
-      sha256 "c3ffda9b59eca969865f8595761c02927fe4f062e9f2d529102238175e7d1524"
+      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.2/kploy_0.1.2_darwin_arm64.tar.gz"
+      sha256 "acbb2ca84db3d10a75c308c4fed0e89f754623d2479684a994524e6f89db5337"
 
       define_method(:install) do
         bin.install "kploy"
@@ -29,15 +29,15 @@ class Kploy < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.1/kploy_0.1.1_linux_amd64.tar.gz"
-      sha256 "cba3f7e58c1e46b84e3a68b5e4f04bf328b0abfff40ea9fa205d14ef1639975d"
+      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.2/kploy_0.1.2_linux_amd64.tar.gz"
+      sha256 "ab5255eab0e5cd578b69d180967d917654185a4c5a80e31d44fad9aa910ccce4"
       define_method(:install) do
         bin.install "kploy"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.1/kploy_0.1.1_linux_arm64.tar.gz"
-      sha256 "ad72a14315e51951f32f1462b1c3e34281983caaeca7cec21b655a117f5c09c9"
+      url "https://github.com/bitcomplete/homebrew-tap/releases/download/v0.1.2/kploy_0.1.2_linux_arm64.tar.gz"
+      sha256 "2da2fb96dcebca7d4be8455a1080eaa09c5f710ba72e6898f1d17c016b249cce"
       define_method(:install) do
         bin.install "kploy"
       end
