@@ -1,11 +1,12 @@
 class ContextAtlas < Formula
   desc "Read-only atlas of every place your coding agents run and what they load there"
   homepage "https://github.com/bitcomplete/context-atlas"
-  # SSH form: the repo is private, so anonymous https clones fail. Requires repo access.
-  url "git@github.com:bitcomplete/context-atlas.git",
-      using:  :git,
-      tag:    "v1.0.0"
-  version "1.0.0"
+  # A release asset on this tap, not a clone of the source repo. context-atlas is private, so a
+  # clone requires repo access and the tap would be installable only by people who already have
+  # it. kploy solves the same problem the same way.
+  url "https://github.com/bitcomplete/homebrew-tap/releases/download/v1.1.0-context-atlas/context-atlas-1.1.0.tar.gz"
+  sha256 "bf67e8bcfcdbc54b932bbfc6e649edff2bc5338e3739506003b278be52b6ac88"
+  version "1.1.0"
   depends_on "node"
 
   def install
